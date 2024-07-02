@@ -3,14 +3,23 @@
 
 import { useEffect, useState } from "react";
 import { addIcons } from "ionicons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCross, faRing } from "@fortawesome/free-solid-svg-icons";
 const AddB = () => {
   const [addBirth, setAddBirth] = useState(() => {
     //get initial coount
     const storedCount = localStorage.getItem("natBirth");
     return storedCount ? parseInt(storedCount, 10) : 0;
   });
-  const percentage = Math.round((addBirth / 150) * 100);
-  const percent = Math.round((addBirth * 150) / 100);
+  let min = 150;
+  const percentage = Math.round((addBirth / min) * 100);
+  const Percent = () => {
+    if (percentage == 100 || percentage > 100) {
+      return " Slots are full";
+    } else {
+      return min - addBirth + " Vacant Slots";
+    }
+  };
 
   //update the localstorage
   useEffect(() => {
@@ -28,6 +37,7 @@ const AddB = () => {
     >
       <div className="flex-col">
         <div className="text-sm font-medium text-gray-50 my-2">
+          <FontAwesomeIcon icon={faCross} className="block mr-2" />
           Birth Certificates
         </div>
         <div className="class flex items-center">
@@ -37,8 +47,10 @@ const AddB = () => {
             <div>{percentage.toString()}%</div>
           </div>
         </div>
-        <div className="text-sm font-medium text-gray-400 ">
-          Last week 18.7k
+        <div className="text-sm font-medium text-gray-400">
+          <p>
+            <Percent />
+          </p>
         </div>
       </div>
     </div>

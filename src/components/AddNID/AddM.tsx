@@ -1,5 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCross, faDove, faRing } from "@fortawesome/free-solid-svg-icons";
 
 const AddM = () => {
   const [addMarriage, setAddMarriage] = useState(() => {
@@ -23,6 +25,8 @@ const AddM = () => {
     >
       <div className="flex-col">
         <div className="text-sm font-medium text-pink-400 my-2">
+          {" "}
+          <FontAwesomeIcon icon={faRing} />
           Marriage Contract
         </div>
         <div className="class flex items-center">

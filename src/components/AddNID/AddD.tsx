@@ -1,5 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faDove } from "@fortawesome/free-solid-svg-icons";
 
 const AddD = () => {
   const [addDeath, setAddDeath] = useState(() => {
@@ -23,6 +25,7 @@ const AddD = () => {
     >
       <div className="flex-col">
         <div className="text-sm font-medium text-yellow-400 my-2">
+          <FontAwesomeIcon icon={faDove} className="block" />
           Death Certificates
         </div>
         <div className="class flex items-center">

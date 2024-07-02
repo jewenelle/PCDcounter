@@ -11,6 +11,8 @@ const Reset = () => {
       localStorage.removeItem("natBirth");
       localStorage.removeItem("Sendeath");
       localStorage.removeItem("Ndeath");
+      localStorage.removeItem("seniorCounterNumber");
+      localStorage.removeItem("nationalCounterNumber");
       window.location.reload();
     }
   };

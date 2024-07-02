@@ -1,4 +1,6 @@
 "use client";
+import { faFaceGrinTongueWink } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useState } from "react";
 
 const AddC = () => {
@@ -22,7 +24,11 @@ const AddC = () => {
       onClick={IncrementC}
     >
       <div className="flex-col">
-        <div className="text-sm font-medium text-green-400 my-2">CENOMAR</div>
+        <div className="text-sm font-medium text-green-400 my-2">
+          {" "}
+          <FontAwesomeIcon icon={faFaceGrinTongueWink} className="mr-1" />
+          CENOMAR
+        </div>
         <div className="class flex items-center">
           <div className="text-3xl font-bold text-gray-200">{addCenomar}</div>
           <div className="flex items-center justify-between mx-2 px-0.5 py-0.5 rounded-xl text-green-500 font-medium ">

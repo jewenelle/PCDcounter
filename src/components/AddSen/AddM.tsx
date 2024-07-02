@@ -1,4 +1,6 @@
 "use client";
+import { faRing } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useState } from "react";
 
 const AddM = () => {
@@ -23,6 +25,8 @@ const AddM = () => {
     >
       <div className="flex-col">
         <div className="text-sm font-medium text-pink-400 my-2">
+          {" "}
+          <FontAwesomeIcon icon={faRing} />
           Marriage Contract
         </div>
         <div className="class flex items-center">

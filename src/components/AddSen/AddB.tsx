@@ -3,6 +3,8 @@
 
 import { useEffect, useState } from "react";
 import { addIcons } from "ionicons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCross } from "@fortawesome/free-solid-svg-icons";
 const AddB = () => {
   const [addBirth, setAddBirth] = useState(() => {
     //get initial coount
@@ -27,6 +29,8 @@ const AddB = () => {
     >
       <div className="flex-col">
         <div className="text-sm font-medium text-gray-50 my-2">
+          {" "}
+          <FontAwesomeIcon icon={faCross} className="mr-1" />
           Birth Certificates
         </div>
         <div className="class flex items-center">
