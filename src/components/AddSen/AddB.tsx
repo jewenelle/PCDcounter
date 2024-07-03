@@ -8,7 +8,8 @@ import { faCross } from "@fortawesome/free-solid-svg-icons";
 const AddB = () => {
   const [addBirth, setAddBirth] = useState(() => {
     //get initial coount
-    const storedCount = localStorage.getItem("senBirth");
+
+    let storedCount = localStorage.getItem("senBirth");
     return storedCount ? parseInt(storedCount, 10) : 0;
   });
   const percentage = Math.round((addBirth / 150) * 100);
@@ -16,7 +17,7 @@ const AddB = () => {
   //update the localstorage
   useEffect(() => {
     //update localStorage whenever the count changes
-    localStorage.setItem("senBirth", addBirth.toString());
+    window.localStorage.setItem("senBirth", addBirth.toString());
   }, [addBirth]);
 
   const Increment = () => {

@@ -2,7 +2,7 @@
 import React from "react";
 import Link from "next/link";
 import Reset from "../reset";
-import { useRouter } from "next/navigation";
+
 import { usePathname } from "next/navigation";
 
 const Header = () => {

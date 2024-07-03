@@ -37,7 +37,7 @@ const AddB = () => {
     >
       <div className="flex-col">
         <div className="text-sm font-medium text-gray-50 my-2">
-          <FontAwesomeIcon icon={faCross} className="block mr-2" />
+          <FontAwesomeIcon icon={faCross} className=" mr-1" />
           Birth Certificates
         </div>
         <div className="class flex items-center">
