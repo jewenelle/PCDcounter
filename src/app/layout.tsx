@@ -2,7 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "CRSCounter App",
+  title: "CRS Counter",
   description: "A real counter app",
 };
 

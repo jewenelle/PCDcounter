@@ -2,7 +2,7 @@
 import React from "react";
 import Link from "next/link";
 import Reset from "../reset";
-
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import Report from "../report";
 
@@ -10,10 +10,35 @@ const Header = () => {
   const pathname = usePathname();
   return (
     <>
-      <h1 className="text-white">
-        <span className="font-bold">Dexter Padillo</span> - Civil Administration
-        Officer
-      </h1>
+      <div className="w-full flex justify-around gap-2">
+        <div className="flex justify-between items-center gap-3">
+          <Image
+            src={"/dex.jpg"}
+            width={100}
+            height={100}
+            alt="Picture of the author"
+            className="rounded-[100%] aspect-auto w-[70px] h-[70px]"
+          />
+          <h1 className="text-white">
+            <span className="font-bold">Dexter Padillo</span> - Civil
+            Administration Officer
+          </h1>
+        </div>
+        <div className=" flex justify-between items-center gap-3">
+          <h1 className="text-white text-right">
+            <span className="font-bold">Jewenelle Archide</span> - Civil
+            Administration Officer
+          </h1>
+          <Image
+            src={"/me2.jpg"}
+            width={100}
+            height={100}
+            alt="Picture of the author"
+            className="rounded-[100%] aspect-auto w-[70px] h-[70px]"
+          />
+        </div>
+      </div>
+
       <p className="text-[14px] font-semibold text-white tracking-wider">
         PSA/CRS Dipolog City Zamboanga Del Norte
       </p>

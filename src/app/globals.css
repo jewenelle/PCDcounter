@@ -15,3 +15,16 @@ td {
   width: 100%;
   border-bottom: 1px solid #fff;
 }
+.generate {
+  border: 1px solid white;
+  padding: 5px;
+  border-radius: 8px;
+  font-weight: 500;
+  text-transform: capitalize;
+  text-decoration: double;
+  transition: all 5ms ease-in-out;
+}
+.generate:hover {
+  background: whitesmoke;
+  color: #060c2b;
+}

@@ -1,7 +1,10 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFaceGrinTongueWink } from "@fortawesome/free-solid-svg-icons";
+import {
+  faFaceGrinTongueWink,
+  faFunnelDollar,
+} from "@fortawesome/free-solid-svg-icons";
 
 const AddC = () => {
   const [addCenomar, setAddCenomar] = useState(() => {
@@ -31,7 +34,7 @@ const AddC = () => {
     >
       <div className="flex-col">
         <div className="text-sm font-medium text-green-400 my-2">
-          <FontAwesomeIcon icon={faFaceGrinTongueWink} className="mr-1" />
+          <FontAwesomeIcon icon={faFunnelDollar} className="mr-1" />
           CENOMAR
         </div>
         <div className="class flex items-center">

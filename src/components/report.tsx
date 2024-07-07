@@ -23,7 +23,7 @@ const Report = () => {
 
   return (
     <div className="">
-      <button onClick={Generate} className="text-white">
+      <button onClick={Generate} className="text-white text-[14px] generate ">
         generate Report
       </button>
       {openReport && (
