@@ -8,6 +8,8 @@ import Header from "@/components/Header/Header";
 
 import { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPersonCane } from "@fortawesome/free-solid-svg-icons/faPersonCane";
 const Home = () => {
   const [senCount, setSencount] = useState(() => {
     const senorCount = localStorage.getItem("seniorCounterNumber");
@@ -26,7 +28,7 @@ const Home = () => {
             className="text-[32px] text-white font-bold bg-slate-900 w-1/2 rounded-lg"
             onClick={() => setSencount((prevCount) => prevCount + 1)}
           >
-            +
+            + <FontAwesomeIcon icon={faPersonCane} />
           </button>
           <p className="text-[32px] text-white">{senCount}</p>
         </div>

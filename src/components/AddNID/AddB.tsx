@@ -14,8 +14,8 @@ const AddB = () => {
   let min = 150;
   const percentage = Math.round((addBirth / min) * 100);
   const Percent = () => {
-    if (percentage == 100 || percentage > 100) {
-      return " Slots are full";
+    if (percentage == 100) {
+      return "slots are full";
     } else {
       return min - addBirth + " Vacant Slots";
     }
@@ -28,11 +28,18 @@ const AddB = () => {
   }, [addBirth]);
 
   const Increment = () => {
-    setAddBirth((prevCount) => prevCount + 1);
+    if (percentage == 100) {
+      setAddBirth((prevcount) => (prevcount = 0));
+      return setAddBirth(addBirth);
+    } else {
+      setAddBirth((prevCount) => prevCount + 1);
+    }
   };
   return (
     <div
-      className="bg-gray-700 flex items-start h-28 md:w-40 w-60 justify-center px-4 mx-0.5 my-0.5 cursor-pointer"
+      className={`bg-gray-700 flex items-start h-28 md:w-40 w-60 justify-center px-4 mx-0.5 my-0.5 cursor-pointer aria-hidden ${
+        percentage >= 100 ? `cursor-not-allowed` : ""
+      }`}
       onClick={Increment}
     >
       <div className="flex-col">

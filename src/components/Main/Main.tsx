@@ -5,6 +5,9 @@ import Header from "@/components/Header/Header";
 import AddM from "@/components/AddNID/AddM";
 import AddD from "@/components/AddNID/AddD";
 import AddC from "@/components/AddNID/AddC";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPersonCane } from "@fortawesome/free-solid-svg-icons";
+import { faPerson } from "@fortawesome/free-solid-svg-icons/faPerson";
 
 const Home = () => {
   const [natCount, setNatcount] = useState(() => {
@@ -16,7 +19,7 @@ const Home = () => {
   }, [natCount]);
 
   return (
-    <div className="mx-auto">
+    <div className="mx-auto relative">
       <div className="flex flex-col items-center justify-center bg-gray-800 p-4 md:h-100 h-full">
         <Header />
         <hr className="w-1/3 h-2" />
@@ -25,7 +28,7 @@ const Home = () => {
             className="text-[32px] text-white font-bold bg-slate-900 w-1/2 rounded-lg"
             onClick={() => setNatcount((prevCount) => prevCount + 1)}
           >
-            +
+            + <FontAwesomeIcon icon={faPerson} />
           </button>
           <p className="text-[32px] text-white">{natCount}</p>
         </div>

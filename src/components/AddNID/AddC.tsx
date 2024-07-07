@@ -9,6 +9,7 @@ const AddC = () => {
     const NmarStoreCount = localStorage.getItem("Ncenomar");
     return NmarStoreCount ? parseInt(NmarStoreCount, 10) : 0;
   });
+  let min = 150;
   const percentage = Math.round((addCenomar / 150) * 100);
   //upadate the localstorage
   useEffect(() => {
@@ -16,7 +17,12 @@ const AddC = () => {
   }, [addCenomar]);
 
   const IncrementC = () => {
-    setAddCenomar((prevCount) => prevCount + 1);
+    if (percentage == 100) {
+      setAddCenomar((prevcount) => (prevcount = 0));
+      return setAddCenomar(addCenomar);
+    } else {
+      setAddCenomar((prevCount) => prevCount + 1);
+    }
   };
   return (
     <div
@@ -35,7 +41,11 @@ const AddC = () => {
             <div>{percentage}%</div>
           </div>
         </div>
-        <div className="text-sm font-medium text-gray-400 ">Last week 97k</div>
+        <div className="text-sm font-medium text-gray-400 text-center ">
+          {percentage == 100
+            ? "Slot are Full"
+            : min - addCenomar + " vacant Slots"}
+        </div>
       </div>
     </div>
   );
